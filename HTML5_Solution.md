@@ -141,7 +141,7 @@ Basic
 
 ## 이미지 태그
 
-* <code>`<img src`[^src]`="경로"`></code>
+* <code>`<img src="경로"`></code>
   * 이미지 삽입
   * <code>`alt="홈으로 가기"`</code>
     * 이미지를 설명하는 대체 텍스트
@@ -150,7 +150,6 @@ Basic
   * <code>`width="숫자", height="숫자"`</code>
     * 이미지 크기 조정
     * 이미지 용량은 그대로
-[^src]:  src는 source의 준말
 
 ## 하이퍼링크
 
@@ -168,10 +167,9 @@ Basic
   * <code>`<map name="맵이름">`</code>
   * <code>`<area shape="rect" coords="10,10,160,200 href="링크할 주소">`</code>
     * <code>`shape="rect"`</code>
-    * <code>`coords`[^coords]`="10,10,160,200"`</code>
+    * <code>`coords="10,10,160,200"`</code>
 
-  [^coords]: shape 속성에 따라 coords 속성이 달라진다.
-  ex) 사각형의 경우 왼쪽,위 꼭지점 좌표와 오른쪽,아래 꼭지점 좌표
+  
 
 ## 폼
 
