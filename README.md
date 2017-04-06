@@ -470,7 +470,9 @@ Basic
   * 그라데이션 반복
     * `repeating-linear-...`
     * '패턴'을 만들어 반복시킴
+
 [^Generator]: [Gradient CSS Generator](http://www.cssmatic.com/gradient-generator)  
+
 ## 박스 모델
 * 블록 레벨 요소
   * 요소의 너비가 100%
