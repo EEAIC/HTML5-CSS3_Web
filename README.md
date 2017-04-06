@@ -444,7 +444,7 @@ Basic
 * `background: url('images/bg3.jpg') no-repeat`
   * 배경 관련 속성을 줄여서 표기
   * 순서 상관 없음
-### 그라데이션[^Generator]
+### 그라데이션
 * 구형 모던 브라우저에서는 브라우저 접두사를 붙여야 함
 *
 * `linear-gradient(<각도> to <방향>, blue, <색상 중지점>,  white)`
@@ -470,8 +470,7 @@ Basic
   * 그라데이션 반복
     * `repeating-linear-...`
     * '패턴'을 만들어 반복시킴
-
-[^Generator]: [Gradient CSS Generator](http://www.cssmatic.com/gradient-generator)  
+* [Gradient CSS Generator](http://www.cssmatic.com/gradient-generator)  
 
 ## 박스 모델
 * 블록 레벨 요소
