@@ -1,7 +1,7 @@
 HTML5
 ===
 Basic
-----
+---
 ## Definition
 ### HyperText Markup Lauguage
   * HyperText
