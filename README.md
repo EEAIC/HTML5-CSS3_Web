@@ -16,8 +16,6 @@ HTML5
   * [폼](#폼)
   * [시맨틱 태그](#시맨틱-태그)
   * [멀티미디어 영역](#멀티미디어-영역)
-  * [애니메이션](#애니메이션)
-    * [변형](#변형)
       * [웹 문서 업로드](#웹-문서-업로드)
 * [CSS](#css)
   * [Basic](#basic-1)
@@ -47,6 +45,9 @@ HTML5
   * [CSS3 선택자](#css3-선택자)
     * [연결 선택자](#연결-선택자)
     * [가상 클래스](#가상-클래스)
+  * [애니메이션](#애니메이션)
+    * [변형](#변형)
+  * [반응형 웹 디자인](#반응형-웹-디자인)
 
 <!-- tocstop -->
 
@@ -398,38 +399,6 @@ HTML5
   * WebVTT
     * 모든 브라우저에서 공식적으로 지원하는 자막 파일 형식
     * 자막 내용과 시간 정보를 함꼐 담고 있음
-
-## 애니메이션
-### 변형
-* 2차원 변형
-  * 수평 수직으로 웹 요소 변형
-* 3차원 변형
-  * 2차원에 원근감 추가
-* `transform:translate(tx, ty)`
-  * 지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시킴
-* `transform:scale(sx, sy)`
-  * 지정한 크기만큼 요소를 확대/축소
-* `transform:rotate(각도)`
-  * 일반 각도나 래디안 값 사용
-* `transform:rotate3d(rx, ry, rz)`
-* `transform:skew(ax, ay)`
-  * 요소를 지정한 각도만큼 비틀어 왜곡
-* `transform-origin:<x축><y축><z축>`
-  * 특정 지점을 변형의 기준으로 설정
-* `perspective: <크기>`
-  * 원근감을 갖게 함
-  * 속성 값을 0보다 커야함
-* `perspective-origin: <x축 값>`
-* `transfom-style: preserve-3d`
-  * 부모 요소에 적용한 3D 변형을 하위 요소에도 적용
-*  `backface-visibility: visible`
-  * `visible` 기본값
-  * 요소의 뒷면을 표시할 것인지 결정
-  
-
-
-
-
 
 #### 웹 문서 업로드
 
@@ -829,3 +798,127 @@ Basic
   * `::after`
     * 특정 요소의 뒤에 지정한 내용을 추가
   * **실제 브라우져 상에는 표현되지만 자바스크립트로 수정 불가**
+
+## 애니메이션
+### 변형
+* 2차원 변형
+  * 수평 수직으로 웹 요소 변형
+* 3차원 변형
+  * 2차원에 원근감 추가
+* `transform:translate(tx, ty)`
+  * 지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시킴
+* `transform:scale(sx, sy)`
+  * 지정한 크기만큼 요소를 확대/축소
+* `transform:rotate(각도)`
+  * 일반 각도나 래디안 값 사용
+* `transform:rotate3d(rx, ry, rz)`
+* `transform:skew(ax, ay)`
+  * 요소를 지정한 각도만큼 비틀어 왜곡
+* `transform-origin:<x축><y축><z축>`
+  * 특정 지점을 변형의 기준으로 설정
+* `perspective: <크기>`
+  * 원근감을 갖게 함
+  * 속성 값을 0보다 커야함
+* `perspective-origin: <x축 값>`
+* `transfom-style: preserve-3d`
+  * 부모 요소에 적용한 3D 변형을 하위 요소에도 적용
+*  `backface-visibility: visible`
+  * `visible` 기본값
+  * 요소의 뒷면을 표시할 것인지 결정
+* 트랜지션
+  * 웹 요소의 스타일 속성이 자연스럽게 바뀌는 것
+  * `transition-property`
+    * 트랜지션을 적용할 속성 선택
+    * `:all`
+      * 해당 요소의 모든 속성에 적용
+    * `:background-color`  
+      * 해당 요소의 배경 색에 적용
+    * `:width, height`
+      * 너비와 높이에 트랜지션 적용
+  * `transition-duration`
+    * 트랜지션 진행 시간 지정
+    * `:2s, 1s`
+      * 시간의 단위는 초 또는 밀리초
+      * 트랜지션이 여러개의 경우 쉼표로 구분
+  * `transiton-timing-function`
+    * 트랜지션의 시작과 중간, 끝에서의 속도 지정
+    * `:linear`
+      * 시작부터 끝까지 똑같은 속도로 트랜지션을 진행
+    * `:ease`
+      * 기본값
+      * 처음에는 천천히, 중간에는 빠르게, 마지막에는 천천히
+    * `:ease-in`
+      * 시작을 느리게
+    * `:ease-out`
+      * 끝을 느리게
+    * `:ease-in-out`
+      * 느리게 시작하고 느리게 끝내기
+  * `transition-delay`
+    * 트랜지션 시작 지연 시간 결정
+    * `:3s`
+* 애니메이션    
+  * 애니에션의 시작과 끝을 비롯해 상태가 바뀌는 지점을 설정
+  * `@keyframes <이름> { form(or 0%) { <스타일> } to(or 100%) { <스타일> } }`
+    * 애니메이션 정의
+  * `animation-name: <이름>`
+    * 적용할 애니메이션을 지정
+  * `animation-duration`
+    * 애니메이션 실행 시간 설정
+  * `animation-direction`
+    * `:normal`
+      * 기본값
+      * 끝까지 실행하면 원래 위치로 돌아감
+    * `:alternate`
+      * 끝까지 실행하면 왔던 방향으로 되돌아 가면서 애니메이션을 실행
+  * `animation-iteration-count`
+    * 애니메이션 반복 횟수 지정
+    * `:infinite`
+      * 무한 반복
+  * `animation-timing-function`
+  * `animation`
+    * 여러 개의 애니메이션 속성을 하나의 속성으로 줄여서 사용
+    * `: **<animation-name>** | **<animation-duration>** | <animation-timing-function> | <animation-delay> | <animation-iteration-count> | <animation-direction>`
+
+## 반응형 웹 디자인
+  * `<meta name="viewpoint" content="<속성1=값1>, <속성2=값2>">`
+    * `width=device-width`
+      * 디바이스의 넓이대로 표시
+    * `user-scalable=yes`
+      * 확대/축소 가능 여부
+    * `initial-scale=1`
+      * 1~10
+      * 초기 확대/축소 값
+    * `minimum-scale=0.25`
+      * 1~10
+      * 최소 확대/축소 값
+    * `maximum-scale=1.6`
+      * 0~10
+      * 최대 확대/축소 값
+  * 그리드 시스템
+    * 고정 그리드 레이아웃
+      * `#wrapper`
+        * `width:960px`
+      * 줄일 경우 일부가 가려짐
+    * 가변 그리드 레이아웃   
+      * `#wrapper`
+        * `width:96%`
+      * `margin` 이나 `padding` 값 모두 %로 표시  
+  * 가변 요소
+    * 가변 글꼴
+      * `font-size: 1.5em`
+      * 1em = 16px
+        * 부모요소 중첩될 경우 그 크기가 계속 달라딤
+      * rem
+        * 처음부터 기본 크기를 지정
+        * 부모 요소에 따라 글자크기를 조정
+    * 가변 이미지
+      * `max-width:100%`
+      * `<img src="<이미지>" scrset="<이미지1> 2x">`
+        * 해상도에 따라 이미지가 달라짐
+      * `<picture>`
+        `<source srcset="<이미지>" media="(min-width:1024px)">`
+        `<img src="<이미지>">`
+        `</picture>`
+        * 해상도뿐만 아니라 화면 너비에 따라 다른 이미지 파일 표시
+    * 가변 비디오
+      * `max-width:100%`
