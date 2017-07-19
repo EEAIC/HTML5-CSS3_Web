@@ -924,3 +924,74 @@ Basic
         * 해상도뿐만 아니라 화면 너비에 따라 다른 이미지 파일 표시
     * 가변 비디오
       * `max-width:100%`
+* 미디어 쿼리
+  * `@media [only | not] 미디어 유형 and (조건) and (조건)`
+    * `,`
+      * 동일한 스타일 유형을 사용할 미디어의 유형과 조건이 있다면 쉼표를 이용해 추가
+    * `only`  
+      * 미디어 쿼리를 지원라는 웹 브라우저에서만 조건을 인식
+    * `not`
+      * 다음에 지정하는 미디어 유형을 제외
+    * `and`
+      * 조건을 계속 추가
+    * `width, height`
+      * 웹 페이지의 가로 너비, 세로 높이
+    * `orientation: portrait`
+      * 단말기 세로 방향
+    * `orientation: landscape`
+      * 단말기 가로 방향
+  * `<link rel="stylesheet" media="미디어 쿼리 조건" href="css 파일 경로>"`
+  * `@import url(css 파일 경로) 미디어 쿼리 조건`
+* 플랙서블 박스 레이아웃
+  * 그리드 레이아웃을 기본으로, 플렉스 박스를 원하는 위치에 배치
+  * 브라우저 접두사를 붙여야함
+  * `display: flex`
+    * 배치 요소들을 감싸는 부모 요소를 플랙스 컨테이너로 지정
+  * `display: inline-flex`
+  * `flex-direction`
+    * 플렉스 항목 배치 방향 지정
+    * `:row`
+      * 기본값
+      * 주축을 가로로 교차축을 세로로 지정
+      * 왼쪽에서 오른쪽으로 배치
+    * `:column`
+      * 주축을 새로로 교차축을 가로로 지정
+  * `flex-wrap`
+    * 플렉스 항목을 한 줄 또는 여러 줄로 배치
+    * `:no-wrap`
+      * 기본값
+      * 항목을 한줄에 배치
+    * `:wrap`
+      * 항목을 여러줄에 배치
+  * `flex-flow`
+    * 배치 방향과 여러 줄 배치를 한꺼번에 지정  
+  * `order`
+    * 플렉스 항목의 배치 순서 바꾸기
+  * `just-content`
+    * 플렉스 항목을 주축 방향으로 배치할 때의 배치 기준
+    * `:flex-start`
+    * `:flex-end`
+    * `:center`
+    * `:space-between`
+      * 첫번째와 마지막 항목을 시작점과 끝점에 배치
+      * 나머지 항목을 균등하게 배치
+    * `:space-around`  
+      * 모든 플렉스 항목들을 같은 간격으로 배치
+  * `align-items`
+    * 교차축을 기준으로 하는 배치 방법 조절
+    * `:stretch`
+      * 플렉스 항목을 확장해 교차축을 꽉 채웁니다.
+    * `:flex-start`
+      * 교차축의 끝점을 기준으로 배치
+    * `:baseline`
+  * `align-self`  
+  * `align-content`
+    * 플랙스 항목이 여러 줄로 표시될 떄 교차 축 기준의 배치 방법 지정
+    * `:flex-start`
+      * 기본값
+    * `:flex-end`
+    * `:center`
+    * `:space-between`
+    * `:space-around`
+  * `flex : [<flex-grow> <flex-shrink> <flex-basis>] | auto | initial`
+   
